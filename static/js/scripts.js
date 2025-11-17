@@ -674,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function sendMessage() {
     // --- ADDED THIS CONSOLE.LOG ---
-    console.log("sendMessage function called");
+    // console.log("sendMessage function called");
 
     const value = chatInput.value.trim();
     if (!value) return;
@@ -700,7 +700,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await response.json();
 
       // --- ADDED THIS CONSOLE.LOG ---
-      console.log("Received from backend:", result);
+      // console.log("Received from backend:", result);
 
       let htmlResponse = "";
       switch (result.type) {
