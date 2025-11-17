@@ -1,8 +1,3 @@
-Here’s a README that fits your project’s personality — modern, sharp, and good enough to make a recruiter _actually_ read it.
-It avoids hype and feels like a real engineer’s flagship project write-up.
-
----
-
 # **AIStora**
 
 Aistora is an end-to-end AI analytics platform powered by a custom in-memory data engine and a natural-language query layer. It lets users upload CSVs, explore them with SQL-like operations, and generate charts and summaries simply by chatting with an AI assistant.
