@@ -1,0 +1,72 @@
+<section
+  id="auth-screen"
+  class="flex-1 flex flex-col md:flex-row overflow-auto"
+>
+  <div
+    class="hidden md:flex flex-col justify-between w-1/2 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-50 p-10"
+  >
+    <div>
+      <h1 class="text-3xl font-semibold mb-2">Welcome to Aistora</h1>
+      <p class="text-slate-300 text-sm">
+        Upload CSVs, detect relationships, and chat with your data using AI.
+      </p>
+    </div>
+    <div class="space-y-3 text-sm text-slate-300">
+      <div class="flex items-center gap-2">
+        <i data-lucide="database" class="text-emerald-300 w-4 h-4"></i
+        ><span>Multiple CSVs to one database</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i data-lucide="git-branch" class="text-sky-300 w-4 h-4"></i
+        ><span>AI relationship detection</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i data-lucide="bot" class="text-violet-300 w-4 h-4"></i
+        ><span>AI chat analysis</span>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-1 items-center justify-center p-8">
+    <div class="w-full max-w-sm space-y-6">
+      <div class="text-center md:text-left space-y-1">
+        <h2 id="auth-title" class="text-2xl font-semibold text-slate-800">
+          Login
+        </h2>
+        <p id="auth-subtitle" class="text-xs text-slate-500">
+          Enter your credentials to continue.
+        </p>
+      </div>
+      <div
+        id="auth-error"
+        class="hidden bg-red-50 text-red-600 p-3 rounded-lg text-xs border border-red-100"
+      ></div>
+      <div class="space-y-4">
+        <input
+          id="auth-email"
+          type="email"
+          placeholder="you@example.com"
+          class="w-full p-3 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-sky-500"
+        />
+        <input
+          id="auth-password"
+          type="password"
+          placeholder="••••••••"
+          class="w-full p-3 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-sky-500"
+        />
+        <button
+          id="auth-submit-btn"
+          class="w-full p-3 bg-sky-600 text-white rounded-xl font-medium hover:bg-sky-700 transition flex items-center justify-center gap-2"
+        >
+          <i data-lucide="log-in" class="w-4 h-4"></i
+          ><span id="auth-btn-label">Login</span>
+        </button>
+        <button
+          id="auth-toggle-mode"
+          class="w-full p-3 border border-slate-200 bg-slate-50 text-slate-700 rounded-xl hover:bg-slate-100 transition text-xs"
+        >
+          Don’t have an account? <span class="font-medium">Create one</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

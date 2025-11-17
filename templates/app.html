@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Aistora | App{% endblock %} {% block
+content %}
+<div id="app" class="h-full w-full flex flex-col bg-white">
+  <main class="flex-1 flex flex-col h-0 relative">
+    {% include 'components/overlays.html' %} {% include
+    'components/app/auth_screen.html' %} {% include
+    'components/app/db_selection.html' %} {% include
+    'components/app/upload_screen.html' %} {% include
+    'components/app/chat_screen.html' %}
+  </main>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/scripts.js', v=version_id) }}"></script>
+{% endblock %}
