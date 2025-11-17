@@ -1,0 +1,23 @@
+<div
+  id="loading-overlay"
+  class="hidden absolute inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center z-30"
+>
+  <div class="bg-white rounded-2xl px-6 py-4 shadow-lg flex items-center gap-3">
+    <div class="flex gap-1">
+      <div class="w-2 h-2 rounded-full bg-sky-500 animate-bounce"></div>
+      <div
+        class="w-2 h-2 rounded-full bg-sky-400 animate-bounce [animation-delay:100ms]"
+      ></div>
+      <div
+        class="w-2 h-2 rounded-full bg-sky-300 animate-bounce [animation-delay:200ms]"
+      ></div>
+    </div>
+    <p class="text-xs text-slate-600" id="loading-text">Please wait...</p>
+  </div>
+</div>
+<div
+  id="error-toast"
+  class="hidden absolute top-4 right-4 bg-red-500 text-white text-xs px-4 py-3 rounded-lg shadow-lg z-50"
+>
+  <span id="error-message"></span>
+</div>

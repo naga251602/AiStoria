@@ -1,0 +1,86 @@
+{% extends "base.html" %} {% block title %}Aistora | AI CSV Chat{% endblock %}
+{% block content %}
+<section class="min-h-screen flex flex-col justify-between">
+  <header
+    class="flex items-center justify-between px-8 py-4 border-b bg-white/90 backdrop-blur-md sticky top-0 z-50"
+  >
+    <div class="flex items-center gap-2">
+      <i data-lucide="database" class="text-sky-600 w-6 h-6"></i>
+      <span class="font-semibold text-lg tracking-tight">Aistora</span>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm text-slate-600">
+      <a href="#features" class="hover:text-sky-600 transition">Features</a>
+    </nav>
+    <a
+      href="/app"
+      class="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition"
+    >
+      Launch App
+    </a>
+  </header>
+
+  <main
+    class="flex flex-col items-center justify-center flex-1 text-center px-6 py-20"
+  >
+    <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4">
+      Chat with your <span class="text-sky-600">CSV Data</span>
+    </h1>
+    <p class="text-slate-500 max-w-xl mb-8 text-sm md:text-base">
+      Upload multiple CSVs, detect relationships automatically, and query your
+      data in natural language using AI.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a
+        href="/app"
+        class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-xl text-sm font-medium transition"
+      >
+        Launch App
+      </a>
+    </div>
+  </main>
+
+  <section id="features" class="bg-white py-20 px-6 text-center">
+    <h2 class="text-3xl font-semibold text-slate-800 mb-12">Why Aistora?</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div
+        class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm"
+      >
+        <i
+          data-lucide="upload-cloud"
+          class="text-sky-500 w-8 h-8 mb-4 mx-auto"
+        ></i>
+        <h3 class="font-medium text-slate-800 mb-2">Easy CSV Upload</h3>
+        <p class="text-slate-500 text-sm">
+          Drag, drop, and merge multiple CSVs into a single logical database.
+        </p>
+      </div>
+      <div
+        class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm"
+      >
+        <i
+          data-lucide="git-branch"
+          class="text-emerald-500 w-8 h-8 mb-4 mx-auto"
+        ></i>
+        <h3 class="font-medium text-slate-800 mb-2">Smart Relationships</h3>
+        <p class="text-slate-500 text-sm">
+          Automatically detect table relationships and generate insights.
+        </p>
+      </div>
+      <div
+        class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm"
+      >
+        <i data-lucide="bot" class="text-violet-500 w-8 h-8 mb-4 mx-auto"></i>
+        <h3 class="font-medium text-slate-800 mb-2">AI Chat Interface</h3>
+        <p class="text-slate-500 text-sm">
+          Ask data questions naturally and receive tables, charts, and
+          visualizations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-xs text-slate-400 border-t">
+    © 2025 Aistora. Built for learning and exploration.
+  </footer>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./uploads:/app/uploads
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DATABASE_URL=postgresql://user:password@db:5432/aistora
+      - FLASK_ENV=production
+      - SECRET_KEY=super-secret-key-for-production-fix
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: aistora
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:

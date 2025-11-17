@@ -1,0 +1,9 @@
+Flask
+Flask-SQLAlchemy
+psycopg2-binary
+pytest
+google-generativeai
+python-dotenv
+gunicorn
+selenium
+webdriver-manager

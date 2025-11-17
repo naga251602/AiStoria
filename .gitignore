@@ -1,0 +1,18 @@
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS-specific files
+.DS_Store
+
+# Uploaded data files (ignore all content in uploads, *except* the .gitkeep)
+uploads/*
+!uploads/.gitkeep
+
+# Secrets and environment variables
+.env
+*.json

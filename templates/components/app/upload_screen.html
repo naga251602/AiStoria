@@ -1,0 +1,91 @@
+<section
+  id="upload-screen"
+  class="hidden flex-1 flex flex-col lg:flex-row overflow-hidden"
+>
+  <div
+    class="w-full lg:w-2/5 border-r border-slate-100 p-6 space-y-6 bg-slate-50 overflow-y-auto"
+  >
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="database" class="text-sky-600 w-4 h-4"></i>
+        <h2 class="text-sm font-semibold text-slate-800">
+          CSV Database Uploader
+        </h2>
+      </div>
+      <button
+        id="upload-logout"
+        class="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1"
+      >
+        <i data-lucide="log-out" class="w-3.5 h-3.5"></i>Logout
+      </button>
+    </div>
+    <div class="space-y-3 text-sm">
+      <p class="text-slate-600 font-medium flex items-center gap-2">
+        <i data-lucide="upload-cloud" class="text-sky-500 w-4 h-4"></i> Upload
+        CSV files
+      </p>
+      <div
+        id="drop-zone"
+        class="flex flex-col items-center justify-center border-2 border-dashed border-slate-200 rounded-2xl p-6 text-center bg-white hover:bg-slate-100 cursor-pointer transition-colors"
+      >
+        <i data-lucide="folder-up" class="text-sky-500 w-6 h-6 mb-2"></i>
+        <p class="text-xs text-slate-600">Drop CSV files here</p>
+        <p class="text-[11px] text-slate-400">or click to browse</p>
+        <input
+          id="file-upload"
+          type="file"
+          accept=".csv"
+          multiple
+          class="hidden"
+        />
+      </div>
+      <p class="text-[11px] text-slate-400">
+        Each CSV will be mapped to a table named after the file.
+      </p>
+    </div>
+    <div class="space-y-3 text-sm">
+      <p class="text-slate-600 font-medium flex items-center gap-2">
+        <i data-lucide="git-branch" class="text-emerald-500 w-4 h-4"></i>
+        Relationship detection
+      </p>
+      <button
+        id="detect-relationships-btn"
+        class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs bg-slate-900 text-slate-50 hover:bg-slate-800 transition disabled:opacity-50"
+        disabled
+      >
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Re-detect
+        relationships (AI)
+      </button>
+      <p class="text-[11px] text-slate-400">
+        Runs automatically on upload. Click to re-run.
+      </p>
+    </div>
+    <button
+      id="go-chat"
+      class="w-full inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs bg-sky-600 text-white hover:bg-sky-700 transition disabled:opacity-50"
+      disabled
+    >
+      <i data-lucide="brain" class="w-3.5 h-3.5"></i> Open AI chat
+    </button>
+  </div>
+  <div class="flex-1 p-6 bg-white overflow-y-auto">
+    <div class="flex items-center justify-between mb-2">
+      <p class="text-xs font-semibold text-slate-700 flex items-center gap-2">
+        <i data-lucide="table" class="text-sky-500 w-4 h-4"></i> Uploaded files
+        and table mapping
+      </p>
+      <button
+        id="back-to-db-screen"
+        class="text-xs text-slate-500 hover:text-slate-700 flex items-center gap-1"
+      >
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>Back to Databases
+      </button>
+    </div>
+    <div id="file-list" class="space-y-3 text-xs">
+      <p class="text-[11px] text-slate-400 text-center py-4">
+        Upload files using the panel on the left.
+      </p>
+    </div>
+    <div id="relationship-list" class="mt-4 space-y-2"></div>
+  </div>
+</section>
