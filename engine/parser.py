@@ -22,7 +22,7 @@ class CsvParser:
         if infer_types:
             self.column_types = self._infer_types(sample_size=sample_size)
         else:
-            # Default everything to str if you don't want to infer
+            # Default everything to str if you do not want to infer
             self.column_types = {col: 'str' for col in self.header}
 
     # ---------- Helpers ----------
